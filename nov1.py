@@ -7,7 +7,8 @@ Collect the first letter of each word, uppercase it, and join into the final acr
 Handle edge cases such as empty input or single-word phrases gracefully.
 
 '''
-
-user_phrase = input('Please enter a phrase or sentence: ').strip().lower()
-#revised_input= user_phrase.replace (' ', '').upper()
-print(user_phrase)
+while True:
+    user_phrase = input('Please enter a phrase or sentence: ')
+    #revised_input= user_phrase.replace (' ', '').upper().split()
+    d = ''.join(word[0].upper() for word in user_phrase.split())
+    print(d)
