@@ -9,5 +9,6 @@ Handle edge cases such as empty input or single-word phrases gracefully.
 '''
 while True:
     user_phrase = input('Please enter a phrase or sentence: ')
-    d = ''.join(word[0].upper() for word in user_phrase.split())
-    print(d)
+    user_acronym = ''.join(word[0].upper() for word in user_phrase.split())
+    print(user_acronym)
+ 
