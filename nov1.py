@@ -1,4 +1,6 @@
 '''
+-------------------- ACRONYM GENERATOR ----------------------------------
+
 Generate an acronym by taking the first letter of each word in a phrase and returning the uppercase result.
 
 Prompt the user for a phrase or sentence.

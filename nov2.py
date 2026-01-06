@@ -1,4 +1,6 @@
 '''
+------------------ TEMPERATURE CONVERSION --------------------
+
 Interactively convert temperatures between Celsius, Fahrenheit, and Kelvin with user-selected scales.
 
 Ask which scale the user is converting from (C/F/K).
