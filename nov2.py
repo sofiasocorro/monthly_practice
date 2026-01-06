@@ -73,7 +73,7 @@ def kelvin():
 
 while True:
     from_scale = input('Temperature scale coverting from (C/F/K): ').strip().upper()
-    
+
     if from_scale == 'C':
         celsius()
     
@@ -82,6 +82,10 @@ while True:
     
     if from_scale == 'K':
         kelvin()
+
+    else:
+        print('Please type C, F, or K')
+    
     
 
     
