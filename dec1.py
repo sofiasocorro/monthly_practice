@@ -13,3 +13,18 @@ Output: "The strings are anagrams."
 After normalization, letter counts match.
 
 '''
+
+
+
+while True:
+    word_one = input('Please type first: ')
+    word_two = input('Please type second word: ')
+
+    if len(word_one) == len(word_two):
+        print('The strings are anagrams')
+    
+    else:
+        print('The strings are not anagrams')
+    
+
+
