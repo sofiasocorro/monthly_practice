@@ -17,14 +17,14 @@ After normalization, letter counts match.
 
 
 while True:
-    word_one = input('Please type first: ')
-    word_two = input('Please type second word: ')
+    word_one = input('Please type first: ').lower()
+    word_two = input('Please type second word: ').lower()
 
-    if len(word_one) == len(word_two):
-        print('The strings are anagrams')
+    if len(word_one) == len(word_two) and sorted(word_one) == sorted(word_two):
+        print('\nThe strings are anagrams\n')
     
     else:
-        print('The strings are not anagrams')
+        print('\nThe strings are not anagrams\n')
     
 
 
