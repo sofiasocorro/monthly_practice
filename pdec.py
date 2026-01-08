@@ -18,27 +18,26 @@ while True:
     user_weight = float(input('Weight in kilograms: '))
     user_height = float(input('Height in meters: '))
     calc_bmi = float(user_weight/user_height**2)
-    print(calc_bmi)
+    #print(calc_bmi)
 
     def category():
-        if 0 >= calc_bmi and calc_bmi <= 18.5:
-            print('Underweight')
+        if (calc_bmi <= 18.5):
+            return 'Underweight'
+            
+        elif (calc_bmi >= 18.5 and calc_bmi <= 24.9):
+            return 'Normal'
         
-        if 18.6 >= calc_bmi and calc_bmi <= 24.9:
-            print('Normal')
+        elif (calc_bmi >= 24.9 and calc_bmi <= 29.9):
+            return 'Overweight'
         
-        if 25 >= calc_bmi and calc_bmi <= 29.9:
-            print('Overweight')
-
-        if 30 >= calc_bmi and calc_bmi <= 40:
-            print('Obese')
+        elif (calc_bmi >= 29.9):
+            return 'Obese'
         
         else:
-            print('wrong')
+            return 'wrong'
 
-    print(category())
-    #user_bmi = print(f'BMI: {calc_bmi} -> Category: {category()}')
+    #category()
+    #user_bmi = print(f'BMI: {calc_bmi} -> Category: {category():.2f}')
+    user_bmi = print(f'BMI: {calc_bmi} -> Category: {:.2f}".format(my_float)')
 
-
-    
-
+    print("{:.2f}".format(my_float))
