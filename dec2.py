@@ -15,19 +15,31 @@ Correct formula and category mapping.
 
 '''
 while True:
-    user_weight = int(input('Weight in kilograms: '))
-    user_height = int(input('Height in meters: '))
-    calc_bmi = int(user_weight/user_height**2)
+    user_weight = float(input('Weight in kilograms: '))
+    user_height = float(input('Height in meters: '))
+    calc_bmi = float(user_weight/user_height**2)
     print(calc_bmi)
 
-    for i in range (0,18.5):
-        print('Underweight')
+    def category():
+        if 0 >= calc_bmi <= 18.5:
+            print('Underweight')
+        
+        elif 18.5 >= calc_bmi <= 24.9:
+            print('Normal')
+        
+        elif 25 >= calc_bmi <= 29.9:
+            print('Overweight')
 
-    #if 0 >= calc_bmi <= 18.5:
-        #print('Underweight')
+        elif 30 >= calc_bmi:
+            print('Obese')
+        
+        else:
+            print('none')
+
+    category()
+    user_bmi = print(f'BMI: {calc_bmi} -> Category: {category()}')
 
 
-#print(calc_bmi())
 
     
 
