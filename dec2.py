@@ -14,3 +14,20 @@ Output: "BMI: 22.86 → Category: Normal"
 Correct formula and category mapping.
 
 '''
+while True:
+    user_weight = int(input('Weight in kilograms: '))
+    user_height = int(input('Height in meters: '))
+    calc_bmi = int(user_weight/user_height**2)
+    print(calc_bmi)
+
+    for i in range (0,18.5):
+        print('Underweight')
+
+    #if 0 >= calc_bmi <= 18.5:
+        #print('Underweight')
+
+
+#print(calc_bmi())
+
+    
+
