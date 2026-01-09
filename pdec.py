@@ -36,5 +36,5 @@ while True:
         else:
             return 'Invalid input'
 
-    #category()
+    category()
     user_bmi = print(f'\nBMI: {calc_bmi:.2f} → Category: {category()}\n')
