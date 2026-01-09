@@ -14,6 +14,7 @@ Output: "BMI: 22.86 → Category: Normal"
 Correct formula and category mapping.
 
 '''
+
 while True:
     user_weight = float(input('Weight in kilograms: '))
     user_height = float(input('Height in meters: '))
