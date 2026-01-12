@@ -13,3 +13,8 @@ Output: "10 is not prime" and "Primes up to 10: 2, 3, 5, 7"
 Correct detection and list.
 
 '''
+while True:
+    user_input = float(input('\nPlease type integer N = '))
+
+    if (user_input >= 0 or user_input == 0):
+        print(user_input)
