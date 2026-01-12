@@ -11,6 +11,8 @@ Examples
 Input: N = 10
 Output: "10 is not prime" and "Primes up to 10: 2, 3, 5, 7"
 Correct detection and list.
+not_prime = print(f'{user_input} is not prime')
+prime_numb = print(f'Primes up  to {user_input}: )
 
 '''
 while True:
