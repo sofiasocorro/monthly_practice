@@ -38,6 +38,7 @@ while True:
             return 'Invalid input'
 
     category()
+    #:.2f rounds number to two decimal places
     user_bmi = print(f'\nBMI: {calc_bmi:.2f} → Category: {category()}\n')
 
 
