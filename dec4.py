@@ -14,3 +14,24 @@ Output: "Bulls: 1, Cows: 2"
 4 is a Bull; 9 and 7 (or 2 and 7) are Cows depending on positions.
 
 '''
+
+import random
+
+
+while True:
+    digits = ['0','1','2','3','4','5','6','7','8','9']
+    #random.sample for unique digits
+    #''.join makes characters to a string
+    secret_code = ''.join(random.sample(digits,4))
+    print(secret_code)
+
+
+    attempts = 5
+    user_input = str(input('Guess = '))
+
+    if user_input == secret_code:
+        print('Bulls: 4, You won!')
+        break
+
+    if len(secret_code) == len(user_input) and :
+        print('yes')

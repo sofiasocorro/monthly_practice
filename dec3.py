@@ -16,7 +16,58 @@ prime_numb = print(f'Primes up  to {user_input}: )
 
 '''
 while True:
-    user_input = float(input('\nPlease type integer N = '))
+    user_input = int(input('\nPlease type an integer N = '))
 
-    if (user_input >= 0 or user_input == 0):
-        print(user_input)
+    if user_input <0:
+        print('Please a positive integer.')
+        continue
+    
+    true_prime = True
+
+    if user_input <2:
+        true_prime = False
+
+    
+    else:
+        for i in range(2, int(user_input**0.5) + 1):
+            if user_input%i == 0:
+                true_prime = False
+                break
+
+    if true_prime:
+        print(f'{user_input} is prime')
+
+    else:
+        print(f'{user_input} is not prime')
+
+    
+    primes = []
+    
+    for num in range(2, user_input + 1):
+        prime = True
+        for i in range(2, int(num**0.5)+1):
+            if num%1 == 0:
+                prime = False
+                break
+        
+        if prime:
+            primes.append(str(num))
+    
+    if primes:
+        print(f'Primes up to {user_input}: {', '. join(primes)}')
+
+    else:
+        print(f'Primes up to {user_input}: None')
+
+'''          
+    for i in range(2, user_input):
+        if user_input%i==0:
+            print(f'{user_input} is not a prime')
+
+            primes = []
+            for num in range(2, user_input + 1):
+                primes.append(str(num))
+            print(f'Primes up to {user_input}: {', '.join(primes)}')
+            break
+
+'''   
