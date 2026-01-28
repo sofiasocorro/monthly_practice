@@ -15,11 +15,12 @@ After normalization, letter counts match.
 '''
 
 
-
 while True:
     word_one = input('Please type first: ').lower()
     word_two = input('Please type second word: ').lower()
 
+        #len() checks character count and compares between strings.
+        #sorted() checks if sorted words are the same
     if len(word_one) == len(word_two) and sorted(word_one) == sorted(word_two):
         print('\nThe strings are anagrams\n')
     
