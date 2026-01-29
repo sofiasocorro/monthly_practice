@@ -17,21 +17,56 @@ Output: "Bulls: 1, Cows: 2"
 
 import random
 
+digits = list('0123456789')    
+#random.sample for unique digits
+#''.join makes characters to a string
+#(digits,4) picks up 4 digits
+secret_code = ''.join(random.sample(digits,4))
 
-while True:
-    digits = ['0','1','2','3','4','5','6','7','8','9']
-    #random.sample for unique digits
-    #''.join makes characters to a string
-    secret_code = ''.join(random.sample(digits,4))
-    print(secret_code)
+max_attempts = 5
+remaining_attempts = max_attempts
+
+#loops game while the user still has attempts
+while remaining_attempts > 0:
+    user_input = input(f'Attempts: {remaining_attempts}, Guess = ')
+
+    #.isdigit() checks if its numbers
+    if not user_input.isdigit():
+        print('Please only use digits')
+        continue
+    
+    #checks if user input is less or greater than 4 digits
+    if len(user_input) != 4:
+        print('Enter only 4 digits')
+        continue
+
+    #set(user_input) checks if there's duplicates and if there is, it removes it
+    #if the length changes after set(user_input) then there was duplicates
+    if len(set(user_input)) != 4:
+        print('Digits cannot repeat.')
+        continue
 
 
-    attempts = 5
-    user_input = str(input('Guess = '))
+    bulls = 0
+    cows = 0
 
-    if user_input == secret_code:
-        print('Bulls: 4, You won!')
+    for word in range(4):
+        #checks if the it has the same digit and position
+        if user_input[word] == secret_code[word]:
+            bulls += 1
+        #checks if digit is in the secret code, but its not in the same position
+        elif user_input[word] in secret_code:
+            cows +=1
+
+    print(f'Bulls: {bulls}, Cows: {cows}')
+
+    if bulls == 4:
+        print('You win!')
         break
 
-    if len(secret_code) == len(user_input) and :
-        print('yes')
+    remaining_attempts -= 1
+
+if remaining_attempts == 0:
+    print(f'Attempts: {remaining_attempts}, The secret code was {secret_code}')
+
+   
